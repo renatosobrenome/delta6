@@ -1,34 +1,33 @@
-algoritmo "operacao"
+algoritmo "Calculadora com Operadores"
+var
+   A, B, resultado: real
+   C: caractere
 inicio
-    real A, B
-    caractere C
+   escreva("Digite o primeiro n√∫mero (A): ")
+   leia(A)
+   escreva("Digite o segundo n√∫mero (B): ")
+   leia(B)
+   escreva("Digite o operador (+, -, *, /): ")
+   leia(C)
 
-    escreva("Digite o valor de A: ")
-    leia(A)
-    escreva("Digite o valor de B: ")
-    leia(B)
-    escreva("Digite o operador (+, -, *, /): ")
-    leia(C)
-
-    se C = "+" ent„o
-        escreva("Resultado: ", A + B)
-    sen„o
-        se C = "-" ent„o
-            escreva("Resultado: ", A - B)
-        sen„o
-            se C = "*" ent„o
-                escreva("Resultado: ", A * B)
-            sen„o
-                se C = "/" ent„o
-                    se B <> 0 ent„o
-                        escreva("Resultado: ", A / B)
-                    sen„o
-                        escreva("Erro: divis„o por zero!")
-                    fimse
-                sen„o
-                    escreva("Operador n„o definido.")
-                fimse
-            fimse
-        fimse
-    fimse
+   escolha C
+      caso "+":
+         resultado <- A + B
+         escreva("Resultado: ", resultado)
+      caso "-":
+         resultado <- A - B
+         escreva("Resultado: ", resultado)
+      caso "*":
+         resultado <- A * B
+         escreva("Resultado: ", resultado)
+      caso "/":
+         se B <> 0 entao
+            resultado <- A / B
+            escreva("Resultado: ", resultado)
+         senao
+            escreva("Erro: Divis√£o por zero n√£o permitida!")
+         fimse
+      caso contrario:
+         escreva("Erro: Operador n√£o definido.")
+   fimescolha
 fimalgoritmo
