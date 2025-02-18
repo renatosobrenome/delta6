@@ -1,17 +1,16 @@
-algoritmo "regiao_capital"
+algoritmo "Regi√£o de Capitais Brasileiras"
+var
+   capital: cadeia
 inicio
-    cadeia capital
+   escreva("Digite o nome de uma capital brasileira: ")
+   leia(capital)
 
-    escreva("Digite o nome de uma capital brasileira: ")
-    leia(capital)
-
-    se capital = "Salvador" ou capital = "Recife" ou capital = "Fortaleza" ou capital = "MaceiÛ" ou capital = "Aracaju" ou capital = "Teresina" ou capital = "S„o LuÌs" ou capital = "Natal" ou capital = "Jo„o Pessoa" ou capital = "Olinda" ent„o
-        escreva("A capital ", capital, " È da regi„o Nordeste.")
-    sen„o
-        se capital = "S„o Paulo" ou capital = "Rio de Janeiro" ou capital = "Belo Horizonte" ou capital = "VitÛria" ent„o
-            escreva("A capital ", capital, " È da regi„o Sudeste.")
-        sen„o
-            escreva("A capital ", capital, " È de outra regi„o.")
-        fimse
-    fimse
+   escolha capital
+      caso "S√£o Paulo", "Rio de Janeiro", "Belo Horizonte", "Vit√≥ria":
+         escreva("A capital pertence √† regi√£o Sudeste.")
+      caso "Salvador", "Fortaleza", "Recife", "Natal", "Jo√£o Pessoa", "Teresina", "Macei√≥", "S√£o Lu√≠s", "Aracaju":
+         escreva("A capital pertence √† regi√£o Nordeste.")
+      caso contrario:
+         escreva("A capital pertence a outra regi√£o.")
+   fimescolha
 fimalgoritmo
