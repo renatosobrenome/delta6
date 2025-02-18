@@ -1,22 +1,17 @@
-algoritmo "numero_extenso"
+algoritmo "NÃºmero por Extenso"
+var
+   numero: inteiro
 inicio
-    inteiro numero
+   escreva("Digite um nÃºmero de 1 a 5: ")
+   leia(numero)
 
-    escreva("Digite um número entre 1 e 5: ")
-    leia(numero)
-
-    escolha numero
-        caso 1:
-            escreva("Um")
-        caso 2:
-            escreva("Dois")
-        caso 3:
-            escreva("Três")
-        caso 4:
-            escreva("Quatro")
-        caso 5:
-            escreva("Cinco")
-        outrocaso:
-            escreva("Número inválido")
-    fimescolha
+   escolha numero
+      caso 1: escreva("Um")
+      caso 2: escreva("Dois")
+      caso 3: escreva("TrÃªs")
+      caso 4: escreva("Quatro")
+      caso 5: escreva("Cinco")
+      caso contrario:
+         escreva("NÃºmero invÃ¡lido.")
+   fimescolha
 fimalgoritmo
